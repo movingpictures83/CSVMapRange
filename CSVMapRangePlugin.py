@@ -5,8 +5,8 @@ import random
 # Scaling is done to make median=1
 class CSVMapRangePlugin:
    def input(self, filename):
-      self.myfile = filename+".microbe.csv"
-      self.myfile2 = filename+".metabolite.csv"
+      self.myfile = filename+".file1.csv"
+      self.myfile2 = filename+".file2.csv"
 
    def run(self):
       filestuff = open(self.myfile, 'r')
@@ -34,19 +34,14 @@ class CSVMapRangePlugin:
       self.ADJ = []#numpy.zeros([self.m, self.n])
       self.ADJ2 = []
       i = 0
-      print "M: ", self.m
-      print "N: ", self.n
       for i in range(self.m):
             self.ADJ.append([])
             self.ADJ2.append([])
             contents = lines[i].split(',')
             contents2 = lines2[i].split(',')
             self.samples.append(contents[0])
-            print len(contents)
             for j in range(self.n):
-               #print contents[j+1]
                value = float(contents[j+1].strip())
-               #print self.ADJ[i][j]
                self.ADJ[i].append(value)#[j] = value
                value2 = float(contents2[j+1].strip())
                self.ADJ2[i].append(value2)
