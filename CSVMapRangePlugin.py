@@ -1,6 +1,7 @@
 import sys
 import numpy
 import random
+import PyPluMA
 
 # Scaling is done to make median=1
 class CSVMapRangePlugin:
@@ -58,7 +59,7 @@ class CSVMapRangePlugin:
          for j in range(self.n):
             self.ADJ[i][j] = minimumB + ((self.ADJ[i][j] - minimumA)/(maximumA - minimumA))*(maximumB - minimumB)
             if (self.ADJ[i][j] > 100):
-               print "WARNING: ", self.ADJ[i][j], maximumB
+               PyPluMA.log("WARNING: "+str(self.ADJ[i][j])+" "+str(maximumB))
       filestuff2 = open(filename, 'w')
       filestuff2.write(self.firstline)
       
