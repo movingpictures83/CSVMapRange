@@ -1,0 +1,2 @@
+Prefix plugins/CSVMapRange/example/
+Plugin CSVMapRange inputfile simple_fully_connected_common_enemy outputfile simple_fully_connected_common_enemy.mapped.csv
