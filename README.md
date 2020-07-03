@@ -2,7 +2,8 @@
 # Language: Python
 # Input: prefix (for two CSV files of abundances)
 # Output: CSV (first CSV file, mapped into the range of the second)
-# Tested with: PluMA 1.0, Python 3.6
+# Tested with: PluMA 1.1, Python 3.6
+# Dependency: numpy==1.16.0
 
 PluMA plugin to map the range of values of one CSV file to the range of values of another.
 This can be useful for example when mapping a weighted network to the range of an unweighted network
